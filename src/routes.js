@@ -4,8 +4,13 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
 export default createAppContainer(
-  createSwitchNavigator({
-    SignIn,
-    SignUp,
-  })
+  createSwitchNavigator(
+    {
+      Login: SignIn,
+      Register: SignUp,
+    },
+    {
+      initialRouteName: 'Login',
+    }
+  )
 );

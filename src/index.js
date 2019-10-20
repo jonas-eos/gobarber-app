@@ -2,6 +2,12 @@ import React from 'react';
 
 import Routes from './routes';
 
+import Background from '~/components/Background';
+
 export default function App() {
-  return <Routes />;
+  return (
+    <Background>
+      <Routes />
+    </Background>
+  );
 }
