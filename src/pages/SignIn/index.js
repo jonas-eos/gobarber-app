@@ -2,7 +2,21 @@ import React from 'react';
 import { Text } from 'react-native';
 
 // import { Container } from './styles';
+import Input from '~/components/Input';
+import Button from '~/components/Button';
 
 export default function SignIn() {
-  return <Text>SignIn</Text>;
+  return (
+    <>
+      <Text>SignIn</Text>
+
+      <Input
+        style={{ marginTop: 30 }}
+        icon="call"
+        placeholder="Type your name"
+      />
+
+      <Button>Login</Button>
+    </>
+  );
 }
