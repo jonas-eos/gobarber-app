@@ -56,6 +56,7 @@ Input.propTypes = {
   secureTextEntry: PropTypes.bool,
   returnKeyType: PropTypes.string,
   onSubmitEditing: PropTypes.func,
+  blurOnSubmit: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -68,6 +69,7 @@ Input.defaultProps = {
   secureTextEntry: false,
   returnKeyType: null,
   onSubmitEditing: () => {},
+  blurOnSubmit: true,
 };
 
 export default Input;
