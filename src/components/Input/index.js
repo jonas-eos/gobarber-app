@@ -14,6 +14,9 @@ const Input = forwardRef(
       autoCorrect,
       autoCapitalize,
       secureTextEntry,
+      returnKeyType,
+      onSubmitEditing,
+      blurOnSubmit,
     },
     ref
   ) => {
@@ -34,6 +37,9 @@ const Input = forwardRef(
           autoCorrect={autoCorrect}
           autoCapitalize={autoCapitalize}
           secureTextEntry={secureTextEntry}
+          returnKeyType={returnKeyType}
+          onSubmitEditing={() => onSubmitEditing()}
+          blurOnSubmit={blurOnSubmit}
         />
       </Container>
     );
@@ -48,6 +54,8 @@ Input.propTypes = {
   autoCorrect: PropTypes.bool,
   autoCapitalize: PropTypes.oneOf(['none', 'sentences', 'words', 'characters']),
   secureTextEntry: PropTypes.bool,
+  returnKeyType: PropTypes.string,
+  onSubmitEditing: PropTypes.func,
 };
 
 Input.defaultProps = {
@@ -58,6 +66,8 @@ Input.defaultProps = {
   autoCorrect: true,
   autoCapitalize: null,
   secureTextEntry: false,
+  returnKeyType: null,
+  onSubmitEditing: () => {},
 };
 
 export default Input;
